@@ -6,11 +6,12 @@
 
 .scroll-magic {
     overflow-x: hidden;
-    height: 100vh;
+    position: relative;
     padding-bottom: 5200px;
 }
 .stack {
-    height: 100vh;
+    height: calc(100vh - 50px);
+    box-sizing: border-box;
 }
 .stack-first img {
     width: 100%;
@@ -33,7 +34,7 @@
 }
 
 .reveal {
-    width: 100%;
+    /* width: 100%; */
     opacity: 0;
     /* visibility: hidden; */
     /* overflow: hidden; */
@@ -41,14 +42,28 @@
 
 .stack#img-01 {
     position: absolute;
-    top: 35%;
+    top: calc(100vh - 40vh);
     width: 60%;
     right: 2%;
     text-align: right;
 }
 .stack#img-02 {
     position: absolute;
-    top: 50%;
+    top: calc(100vh - 30vh);
     width: 40%;
     left: 2%;
 }
+
+.stack#logo-1 {
+    position: absolute;
+    top: calc(100vh - 25vh);
+    left: 9%;
+    width: 57%;
+}
+
+.stack#logo-1 img {
+    width: 35%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+} 

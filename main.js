@@ -25,6 +25,7 @@ stackContainer.style.position = "fixed";
 gsap.to("#reveal-1", {
   autoAlpha: 1,
   yPercent: -100,
+  transformOrigin: "0% 150%",
   scrollTrigger: {
     trigger: ".scroll-magic-image-first",
     start: "top top",
@@ -37,7 +38,18 @@ gsap.to("#reveal-2", {
   autoAlpha: 1,
   yPercent: -100,
   scrollTrigger: {
-    trigger: "#img-03",
+    trigger: "#img-02",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+  },
+});
+
+gsap.to("#reveal-3", {
+  autoAlpha: 1,
+  yPercent: -100,
+  scrollTrigger: {
+    trigger: "#img-02",
     start: "top top",
     end: "bottom top",
     scrub: true,
