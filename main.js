@@ -12,21 +12,23 @@ const imageScroll = document.querySelector('.scroll-magic');
 
 stackContainer.style.position = "fixed";
 
-gsap.to(".scroll-magic-image-first", {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: "#img-01",
-    start: "top top",
-    end: "top top",
-    scrub: true,
-  },
-});
+// gsap.from(".reveal-1", {
+//   opacity: 1,
+//   scrollTrigger: {
+//     trigger: "#img-01",
+//     start: "top top",
+//     end: "top top",
+//     scrub: true,
+//   },
+// });
 
 gsap.to("#reveal-1", {
   autoAlpha: 1,
   yPercent: -100,
   scrollTrigger: {
-    trigger: "#img-02",
+    trigger: ".scroll-magic-image-first",
+    start: "top top",
+    end: "bottom top",
     scrub: true,
   },
 });
@@ -36,6 +38,8 @@ gsap.to("#reveal-2", {
   yPercent: -100,
   scrollTrigger: {
     trigger: "#img-03",
+    start: "top top",
+    end: "bottom top",
     scrub: true,
   },
 });
